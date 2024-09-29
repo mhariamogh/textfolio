@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    
     const readMoreLink = document.querySelector('.read-more');
     const showLessLink = document.querySelector('.paragraph.hidden a');
     const hiddenParagraph = document.querySelector('.paragraph.hidden');
