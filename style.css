@@ -32,7 +32,7 @@ body {
     display: flex;
     gap: 40px;
     flex-direction: row;
-    font-size: 24px; !important;
+    font-size: 24px !important;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -73,7 +73,7 @@ a:hover {
     color: #fff;
     background-color: #000;
     border-radius: 16px;
-}  
+}
 
 @media screen and (max-width: 768px) {
     body {
@@ -94,13 +94,8 @@ a:hover {
     }
 
     .read-more:hover,
-    .show-less:hover,
-    a:hover {
-        text-decoration: none;
-    }
-
-    
-
+    .show-less:hover {
+    text-decoration: none;
 }
 
-
+}
