@@ -20,11 +20,12 @@ body {
     font-weight: 300;
     line-height: 130%;
     letter-spacing: -2.16px;
+    cursor: default;
 }
 
 .text-content {
     display: flex;
-    gap: 40px;
+    gap: 24px;
     flex-direction: column;
 }
 
@@ -32,7 +33,7 @@ body {
     display: flex;
     gap: 40px;
     flex-direction: row;
-    font-size: 24px;
+    font-size: 16px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -46,7 +47,7 @@ body {
 
 .visible {
     opacity: 1;
-    max-height: 1000px;
+    max-height: 2000px;
     transition: opacity 1s ease, max-height 1s ease;
 }
 
@@ -57,7 +58,7 @@ a {
 }
 
 .read-more,
-.show-less {
+.show-less, #bio-video {
     cursor: pointer;
     text-decoration: none;
     font-size: 40px;
@@ -65,7 +66,7 @@ a {
 
 .read-more:hover,
 .show-less:hover,
-a:hover {
+a:hover, {
     text-decoration: underline;
 }
 
@@ -75,17 +76,33 @@ a:hover {
     border-radius: 16px;
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.pfp-container {
+    opacity: 0; /* Hide the GIF by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.paragraph:hover .pfp-container {
+    opacity: 1; /* Show the GIF when hovering over the paragraph */
+}
+
+
 @media screen and (max-width: 768px) {
     body {
-        padding: 16px;
-    }
-
-    .text-content {
-        gap: 24px;
+        padding: 24px;
     }
 
     .paragraph {
         font-size: 32px;
+        line-height: 150%;
     }
 
     .linkings {
@@ -95,7 +112,16 @@ a:hover {
 
     .read-more:hover,
     .show-less:hover {
-    text-decoration: none;
-}
+        text-decoration: none;
+    }
+
+    .read-more,
+    .show-less {
+        font-size: 24px;
+    }
+
+
+
+
 
 }
