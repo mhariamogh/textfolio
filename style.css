@@ -15,7 +15,7 @@ body {
 
 .paragraph {
     color: #000;
-    font-size: 64px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 300;
     line-height: 130%;
@@ -115,10 +115,27 @@ text-decoration: underline;
     position: fixed;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.2;
+    opacity: 0;
     /* Initially hidden */
     transition: opacity 0.1s ease;
     /* Smooth transition */
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    width: 300px;
+}
+
+.tooltip img {
+    width: 100%;
+    height: auto;
 }
 
 

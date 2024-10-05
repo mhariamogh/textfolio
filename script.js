@@ -8,6 +8,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const customCursor = document.createElement('div');
     customCursor.classList.add('custom-cursor');
     document.body.appendChild(customCursor);
+    // Get the link and the tooltip elements
+    const link = document.querySelector('.og-link');
+    const tooltip = document.getElementById('tooltip');
+
+    // Show the tooltip on hover
+    link.addEventListener('mouseover', (event) => {
+        tooltip.style.display = 'block';
+    });
+
+    // Move the tooltip with the cursor, but above it
+    link.addEventListener('mousemove', (event) => {
+        const tooltipHeight = tooltip.offsetHeight; // Get tooltip's height
+        tooltip.style.left = `${event.pageX + 10}px`;
+        tooltip.style.top = `${event.pageY - tooltipHeight - 10}px`; // Position above cursor
+    });
+
+    // Hide the tooltip when the mouse leaves the link
+    link.addEventListener('mouseout', () => {
+        tooltip.style.display = 'none';
+    });
+
 
     video.addEventListener('mouseover', () => {
         customCursor.style.opacity = 1; // Show the custom cursor
@@ -16,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     video.addEventListener('mouseout', () => {
         customCursor.style.opacity = 0; // Hide the custom cursor
     });
+    
 
     document.addEventListener('mousemove', (e) => {
         customCursor.style.left = e.clientX + 'px';
