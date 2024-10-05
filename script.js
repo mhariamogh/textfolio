@@ -5,16 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const hiddenParagraph = document.querySelector('.paragraph.hidden');
     const fadeInElements = document.querySelectorAll('.fade-in');
     const video = document.getElementById('bio-video');
-    const bioVideo = document.getElementById('bio-video');
     const customCursor = document.createElement('div');
     customCursor.classList.add('custom-cursor');
     document.body.appendChild(customCursor);
 
-    bioVideo.addEventListener('mouseover', () => {
+    video.addEventListener('mouseover', () => {
         customCursor.style.opacity = 1; // Show the custom cursor
     });
 
-    bioVideo.addEventListener('mouseout', () => {
+    video.addEventListener('mouseout', () => {
         customCursor.style.opacity = 0; // Hide the custom cursor
     });
 
