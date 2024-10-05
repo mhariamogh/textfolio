@@ -58,7 +58,8 @@ a {
 }
 
 .read-more,
-.show-less, #bio-video {
+.show-less,
+#bio-video {
     cursor: pointer;
     text-decoration: none;
     font-size: 40px;
@@ -66,8 +67,9 @@ a {
 
 .read-more:hover,
 .show-less:hover,
-a:hover, {
-    text-decoration: underline;
+a:hover,
+{
+text-decoration: underline;
 }
 
 .highlight {
@@ -86,13 +88,39 @@ a:hover, {
 }
 
 .pfp-container {
-    opacity: 0; /* Hide the GIF by default */
-    transition: opacity 0.3s ease; /* Smooth transition */
+    opacity: 0;
+    /* Hide the GIF by default */
+    transition: opacity 0.3s ease;
+    /* Smooth transition */
 }
 
 .paragraph:hover .pfp-container {
-    opacity: 1; /* Show the GIF when hovering over the paragraph */
+    opacity: 1;
+    /* Show the GIF when hovering over the paragraph */
 }
+
+#pfp-gif {
+    display: none;
+}
+
+#bio-video {
+    cursor: none;
+}
+
+.custom-cursor {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.2;
+    /* Initially hidden */
+    transition: opacity 0.1s ease;
+    /* Smooth transition */
+}
+
 
 
 @media screen and (max-width: 768px) {
@@ -107,7 +135,7 @@ a:hover, {
 
     .linkings {
         font-size: 16px;
-        gap: 24px;
+        gap: 48px;
     }
 
     .read-more:hover,
@@ -120,7 +148,13 @@ a:hover, {
         font-size: 24px;
     }
 
+    #bio-video {
+        display: none;
+    }
 
+    #pfp-gif {
+        display: block;
+    }
 
 
 
