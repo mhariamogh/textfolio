@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     video.addEventListener('mouseout', () => {
         customCursor.style.opacity = 0; // Hide the custom cursor
     });
-    
+
 
     document.addEventListener('mousemove', (e) => {
         customCursor.style.left = e.clientX + 'px';
